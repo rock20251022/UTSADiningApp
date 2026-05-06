@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.utsa.cs3443.utsadining.EventController"
+      prefWidth="900" prefHeight="620"
+      style="-fx-background-color: #D9D9D9;">
+
+    <padding>
+        <Insets top="20" right="40" bottom="20" left="40"/>
+    </padding>
+
+    <!-- Top bar -->
+    <HBox alignment="CENTER_LEFT" spacing="0">
+        <Button text="←" onAction="#handleBackToDashboard"
+                fx:id="backToDashboard"
+                style="-fx-background-color: transparent; -fx-font-size: 20px; -fx-cursor: hand;"/>
+        <Label text="" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <Button text="⌂" onAction="#handleBackToDashboard"
+                style="-fx-background-color: transparent; -fx-font-size: 20px; -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- Title -->
+    <Label text="EVENTS"
+           style="-fx-font-size: 44px; -fx-font-weight: bold; -fx-text-fill: #E8490F;"/>
+    <Label text="click for more details"
+           style="-fx-font-size: 12px; -fx-text-fill: #555555;"/>
+
+    <!-- Event Cards Grid -->
+    <GridPane hgap="20" vgap="20" alignment="CENTER">
+        <padding><Insets top="30"/></padding>
+
+        <columnConstraints>
+            <ColumnConstraints percentWidth="33.3"/>
+            <ColumnConstraints percentWidth="33.3"/>
+            <ColumnConstraints percentWidth="33.3"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="160"/>
+            <RowConstraints prefHeight="160"/>
+        </rowConstraints>
+
+        <!-- Row 0 -->
+
+        <!-- Taco Tuesday -->
+        <Button fx:id="tacoTuesdayButton" onAction="#handleTacoTuesdayClick"
+                maxWidth="Infinity" maxHeight="Infinity"
+                GridPane.columnIndex="0" GridPane.rowIndex="0"
+                style="-fx-background-color: #0D1B3E; -fx-background-radius: 14;
+                       -fx-border-color: #E8490F; -fx-border-width: 2; -fx-border-radius: 14;
+                       -fx-cursor: hand; -fx-padding: 16;">
+            <graphic>
+                <VBox alignment="TOP_LEFT" spacing="6">
+                    <Label text="Taco Tuesday"
+                           style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <Label text="March 24"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                    <Label text="11:00AM - 9:00PM"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                </VBox>
+            </graphic>
+        </Button>
+
+        <!-- National Waffle Day -->
+        <Button fx:id="waffleWednesdayButton" onAction="#handleWaffleWednesdayClick"
+                maxWidth="Infinity" maxHeight="Infinity"
+                GridPane.columnIndex="1" GridPane.rowIndex="0"
+                style="-fx-background-color: #0D1B3E; -fx-background-radius: 14;
+                       -fx-border-color: #E8490F; -fx-border-width: 2; -fx-border-radius: 14;
+                       -fx-cursor: hand; -fx-padding: 16;">
+            <graphic>
+                <VBox alignment="TOP_LEFT" spacing="6">
+                    <Label text="National Waffle Day"
+                           style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <Label text="March 25"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                    <Label text="8:00AM - 9:00PM"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                </VBox>
+            </graphic>
+        </Button>
+
+        <!-- National Burrito Day -->
+        <Button fx:id="nationalBurritoDayButton" onAction="#handleNationalBurritoDayClick"
+                maxWidth="Infinity" maxHeight="Infinity"
+                GridPane.columnIndex="2" GridPane.rowIndex="0"
+                style="-fx-background-color: #0D1B3E; -fx-background-radius: 14;
+                       -fx-border-color: #E8490F; -fx-border-width: 2; -fx-border-radius: 14;
+                       -fx-cursor: hand; -fx-padding: 16;">
+            <graphic>
+                <VBox alignment="TOP_LEFT" spacing="6">
+                    <Label text="National Burrito Day"
+                           style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <Label text="April 2"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                    <Label text="10:00AM - 2:00PM"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                </VBox>
+            </graphic>
+        </Button>
+
+        <!-- Row 1 -->
+
+        <!-- Fiesta -->
+        <Button fx:id="fiestaEventButton" onAction="#handleFiestaEventClick"
+                maxWidth="Infinity" maxHeight="Infinity"
+                GridPane.columnIndex="0" GridPane.rowIndex="1"
+                style="-fx-background-color: #0D1B3E; -fx-background-radius: 14;
+                       -fx-border-color: #E8490F; -fx-border-width: 2; -fx-border-radius: 14;
+                       -fx-cursor: hand; -fx-padding: 16;">
+            <graphic>
+                <VBox alignment="TOP_LEFT" spacing="6">
+                    <Label text="Fiesta"
+                           style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <Label text="April 20"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                    <Label text="11:00AM - 2:00PM"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                </VBox>
+            </graphic>
+        </Button>
+
+        <!-- Earth Day -->
+        <Button fx:id="earthDayButton" onAction="#handleEarthDayClick"
+                maxWidth="Infinity" maxHeight="Infinity"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"
+                style="-fx-background-color: #0D1B3E; -fx-background-radius: 14;
+                       -fx-border-color: #E8490F; -fx-border-width: 2; -fx-border-radius: 14;
+                       -fx-cursor: hand; -fx-padding: 16;">
+            <graphic>
+                <VBox alignment="TOP_LEFT" spacing="6">
+                    <Label text="Earth Day"
+                           style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <Label text="April 22"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                    <Label text="11:00AM - 2:00PM"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                </VBox>
+            </graphic>
+        </Button>
+
+        <!-- Fiesta Cookie Decorating Contest -->
+        <Button fx:id="fiestaCookieButton" onAction="#handleFiestaCookieClick"
+                maxWidth="Infinity" maxHeight="Infinity"
+                GridPane.columnIndex="2" GridPane.rowIndex="1"
+                style="-fx-background-color: #0D1B3E; -fx-background-radius: 14;
+                       -fx-border-color: #E8490F; -fx-border-width: 2; -fx-border-radius: 14;
+                       -fx-cursor: hand; -fx-padding: 16;">
+            <graphic>
+                <VBox alignment="TOP_LEFT" spacing="6">
+                    <Label text="Fiesta Cookie Decorating Contest"
+                           style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;"
+                           wrapText="true"/>
+                    <Label text="April 17"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                    <Label text="11:00AM - 2:00PM"
+                           style="-fx-text-fill: #aaaacc; -fx-font-size: 13px;"/>
+                </VBox>
+            </graphic>
+        </Button>
+
+    </GridPane>
+
+</VBox>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.utsa.cs3443.utsadining.AboutUsController"
+            prefWidth="1440.0"
+            prefHeight="900.0"
+            styleClass="root-pane"
+            stylesheets="@aboutus.css">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="top-bar">
+            <padding>
+                <Insets top="8" right="14" bottom="8" left="14"/>
+            </padding>
+            <children>
+                <Button text="←" onAction="#goToDashboard" styleClass="icon-back-button"/>
+
+                <ImageView fitWidth="34.0" fitHeight="46.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../assets/utsa-logo.png"/>
+                    </image>
+                </ImageView>
+
+                <Label text="UTSA Dining App" styleClass="page-top-title"/>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    pannable="true"
+                    styleClass="main-scroll">
+
+            <content>
+                <VBox prefWidth="1440.0"
+                      spacing="22.0"
+                      styleClass="about-main-content">
+
+                    <padding>
+                        <Insets top="20" right="110" bottom="60" left="110"/>
+                    </padding>
+
+                    <children>
+                        <Label text="Discover UTSA Dining" styleClass="about-heading"/>
+
+                        <Label text="Our goal is to better your campus dining experience by offering nutritious and convenient meal options. Everyday on our campus we're here to make dining simple."
+                               wrapText="true"
+                               maxWidth="950.0"
+                               styleClass="about-paragraph"/>
+
+                        <HBox alignment="CENTER">
+                            <children>
+                                <ImageView fitWidth="820.0"
+                                           fitHeight="520.0"
+                                           preserveRatio="false"
+                                           styleClass="hero-image">
+                                    <image>
+                                        <Image url="@../../../../assets/aboutus1.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+
+                        <Label text="More Than Just Food" styleClass="section-heading"/>
+
+                        <Label text="Dining is more than just food. It is about connection, culture and community. We create spaces where student and staff can come together to enjoy meals."
+                               wrapText="true"
+                               maxWidth="980.0"
+                               styleClass="about-paragraph"/>
+
+                        <Label text="Driven By What Matters" styleClass="section-heading"/>
+
+                        <Label text="We are committed to improving campus dining through quality and care."
+                               wrapText="true"
+                               maxWidth="900.0"
+                               styleClass="about-paragraph"/>
+
+                        <HBox alignment="CENTER" spacing="22.0">
+                            <children>
+                                <VBox spacing="10.0" styleClass="info-card">
+                                    <children>
+                                        <ImageView fitWidth="210.0" fitHeight="150.0" preserveRatio="false">
+                                            <image>
+                                                <Image url="@../../../../assets/aboutus2.png"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Quality You Can Trust" styleClass="card-title"/>
+                                        <Label text="We focus on fresh ingredients and meal preparation to ensure every meal meets your standards."
+                                               wrapText="true"
+                                               styleClass="card-text"/>
+                                        <Button text="Explore&#10;More"
+                                                onAction="#openQualityPage"
+                                                styleClass="explore-button"/>
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="10.0" styleClass="info-card">
+                                    <children>
+                                        <ImageView fitWidth="210.0" fitHeight="150.0" preserveRatio="false">
+                                            <image>
+                                                <Image url="@../../../../assets/aboutus3.png"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Balanced Choices" styleClass="card-title"/>
+                                        <Label text="We include a variety of options designed to support and aid all lifestyle needs."
+                                               wrapText="true"
+                                               styleClass="card-text"/>
+                                        <Button text="Explore&#10;More"
+                                                onAction="#openBalancedPage"
+                                                styleClass="explore-button"/>
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="10.0" styleClass="info-card">
+                                    <children>
+                                        <ImageView fitWidth="210.0" fitHeight="150.0" preserveRatio="false">
+                                            <image>
+                                                <Image url="@../../../../assets/aboutus4.png"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Always Evolving" styleClass="card-title"/>
+                                        <Label text="We regularly update the menus and services to better meet student and staff needs and preferences."
+                                               wrapText="true"
+                                               styleClass="card-text"/>
+                                        <Button text="Explore&#10;More"
+                                                onAction="#openEvolvingPage"
+                                                styleClass="explore-button"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+                        <Label text="Our Commitment to Campus Dining" styleClass="section-heading"/>
+
+                        <Label text="We are committed to supporting student and staff wellness, sustainability, and a better campus experience for everyone."
+                               wrapText="true"
+                               maxWidth="980.0"
+                               styleClass="about-paragraph"/>
+
+                        <HBox alignment="CENTER" spacing="22.0">
+                            <children>
+                                <VBox spacing="10.0" styleClass="wide-card">
+                                    <children>
+                                        <ImageView fitWidth="350.0" fitHeight="125.0" preserveRatio="false">
+                                            <image>
+                                                <Image url="@../../../../assets/aboutus5.png"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Fueling Your Day" styleClass="card-title-left"/>
+                                        <Label text="We offer meals to keep you energized and focused, helping you stay productive for your day."
+                                               wrapText="true"
+                                               styleClass="card-text-left"/>
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="10.0" styleClass="wide-card">
+                                    <children>
+                                        <ImageView fitWidth="350.0" fitHeight="125.0" preserveRatio="false">
+                                            <image>
+                                                <Image url="@../../../../assets/aboutus6.png"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label text="Sustainability in Action" styleClass="card-title-left"/>
+                                        <Label text="We prioritize actions to reduce waste and strive for a better campus environment."
+                                               wrapText="true"
+                                               styleClass="card-text-left"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+                        <Label text="Bringing People Together" styleClass="section-heading"/>
+
+                        <Label text="We offer a wide range of flavors, traditions, and food experiences."
+                               wrapText="true"
+                               maxWidth="920.0"
+                               styleClass="about-paragraph"/>
+
+                        <HBox spacing="26.0" alignment="TOP_LEFT">
+                            <children>
+                                <VBox spacing="8.0" styleClass="inclusive-image-card">
+                                    <children>
+                                        <ImageView fitWidth="300.0" fitHeight="190.0" preserveRatio="false">
+                                            <image>
+                                                <Image url="@../../../../assets/aboutus7.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="38.0" prefWidth="760.0">
+                                    <children>
+                                        <VBox spacing="8.0">
+                                            <children>
+                                                <Label text="Inclusive Dining Options" styleClass="section-heading-small"/>
+                                                <Label text="We offer a variety of meals ensuring everyone has access to food they can enjoy."
+                                                       wrapText="true"
+                                                       maxWidth="520.0"
+                                                       styleClass="about-paragraph"/>
+                                            </children>
+                                        </VBox>
+
+                                        <VBox spacing="8.0">
+                                            <children>
+                                                <Label text="Building Connections" styleClass="section-heading-small-right"/>
+                                                <Label text="Dining spaces are designed to bring students together, encouraging conversation and community."
+                                                       wrapText="true"
+                                                       maxWidth="560.0"
+                                                       styleClass="about-paragraph-right"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

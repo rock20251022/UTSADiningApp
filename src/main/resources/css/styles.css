@@ -1,0 +1,12 @@
+.orange-button {
+    -fx-background-color: #f15a22;
+    -fx-border-color: #012344;
+    -fx-border-width: 1;
+    -fx-border-radius: 4px;
+    -fx-background-insets: 1;
+}
+
+.orange-button:hover {
+    -fx-background-color: #ff7e4f;
+    -fx-cursor: hand;
+}

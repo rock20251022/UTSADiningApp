@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.utsa.cs3443.utsadining.MobileOrderingController"
+      prefWidth="900" prefHeight="600"
+      style="-fx-background-color: #D9D9D9;">
+
+    <padding>
+        <Insets top="20" right="40" bottom="20" left="40"/>
+    </padding>
+
+    <!-- Top bar: back button + title + home button -->
+    <HBox alignment="CENTER" spacing="0">
+        <Button text="←" onAction="#handleBackToDashboard"
+                fx:id="backToDashboardButton"
+                style="-fx-background-color: transparent; -fx-font-size: 20px; -fx-cursor: hand;"/>
+        <Label text="MOBILE ORDERING" HBox.hgrow="ALWAYS"
+               style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #E8490F; -fx-alignment: CENTER;"
+               maxWidth="Infinity"/>
+        <!-- Home icon placeholder -->
+        <Button text="⌂" onAction="#handleBackToDashboard"
+                style="-fx-background-color: transparent; -fx-font-size: 20px; -fx-cursor: hand;"/>
+    </HBox>
+
+    <VBox spacing="14">
+        <padding>
+            <Insets top="20"/>
+        </padding>
+
+        <!-- Intro -->
+        <Label text="UTSA dining mobile ordering is easy and convenient!"
+               wrapText="true"
+               style="-fx-font-size: 15px; -fx-text-fill: #1a2a4a;"/>
+
+        <Label text="You can order anytime anywhere using the GrubHub app."
+               wrapText="true"
+               style="-fx-font-size: 15px; -fx-text-fill: #1a2a4a;"/>
+
+        <!-- HOW TO ORDER heading -->
+        <Label text="HOW TO ORDER:"
+               style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #1a2a4a;">
+            <VBox.margin><Insets top="10"/></VBox.margin>
+        </Label>
+
+        <!-- GrubHub branding label -->
+        <Label text="🍔 GRUBHUB"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #E8490F;"/>
+
+        <!-- Steps -->
+        <Label text="1.  Download GrubHub app and create a new account. If you have an account sign in."
+               wrapText="true"
+               style="-fx-font-size: 14px; -fx-text-fill: #1a2a4a;"/>
+
+        <Label text="2.  Go to Account and click Campus Dining."
+               wrapText="true"
+               style="-fx-font-size: 14px; -fx-text-fill: #1a2a4a;"/>
+
+        <Label text="3.  Select your campus and choose your affiliation."
+               wrapText="true"
+               style="-fx-font-size: 14px; -fx-text-fill: #1a2a4a;"/>
+
+        <Label text="4.  Add your UTSACard to pay with Dining Dollars or Meal Trades."
+               wrapText="true"
+               style="-fx-font-size: 14px; -fx-text-fill: #E8490F;"/>
+
+        <Label text="5.  Order ahead and skip the line! Grab your meal to-go across campus."
+               wrapText="true"
+               style="-fx-font-size: 14px; -fx-text-fill: #1a2a4a;"/>
+    </VBox>
+
+</VBox>

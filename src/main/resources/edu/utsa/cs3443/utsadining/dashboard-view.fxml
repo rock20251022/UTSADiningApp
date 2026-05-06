@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" stylesheets="@../../../../css/styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utsa.cs3443.utsadining.DashboardController">
+   <HBox minHeight="70.0" prefHeight="70.0" prefWidth="500.0" style="-fx-background-color: #012344;" translateY="-20.0">
+      <children>
+         <Label style="-fx-text-fill: #f15a22;" text="UTSA Dining">
+            <font>
+               <Font name="System Bold" size="36.0" />
+            </font>
+            <HBox.margin>
+               <Insets left="10.0" top="10.0" />
+            </HBox.margin>
+         </Label>
+         <Button mnemonicParsing="false" onAction="#handleLogOutClick" prefHeight="30.0" prefWidth="60.0" styleClass="orange-button" text="Log out" textFill="#012344" translateX="275.0" translateY="18.0">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+      </children>
+   </HBox>
+    <Button mnemonicParsing="false" onAction="#handleRestaurantsClick" prefHeight="38.0" prefWidth="313.0" styleClass="orange-button" text="Restaurants" textFill="#012344" translateY="-10.0">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font></Button>
+   <Button mnemonicParsing="false" onAction="#handleEventsClick" prefHeight="38.0" prefWidth="313.0" styleClass="orange-button" text="Events" textFill="#012344" translateY="-10.0">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#handleMealPlansClick" prefHeight="38.0" prefWidth="313.0" styleClass="orange-button" text="Meal Plans" textFill="#012344" translateY="-10.0">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#handleOrderingClick" prefHeight="38.0" prefWidth="313.0" styleClass="orange-button" text="Ordering" textFill="#012344" translateY="-10.0">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font>
+   </Button>
+   <Button mnemonicParsing="false" onAction="#handleAboutUsClick" prefHeight="38.0" prefWidth="313.0" styleClass="orange-button" text="About us" textFill="#012344" translateY="-10.0">
+      <font>
+         <Font name="System Bold" size="17.0" />
+      </font>
+   </Button>
+</VBox>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="edu.utsa.cs3443.mealplanspages.PlanDetailController"
+            prefWidth="1440.0"
+            prefHeight="900.0"
+            styleClass="root-pane">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="18.0" styleClass="top-bar">
+            <padding>
+                <Insets top="10" right="18" bottom="10" left="18"/>
+            </padding>
+            <children>
+                <Button text="←" onAction="#goBackHome" styleClass="icon-back-button"/>
+
+                <ImageView fitWidth="38.0" fitHeight="52.0" preserveRatio="true">
+                    <image>
+                        <Image url="@assets/utsa-logo.png"/>
+                    </image>
+                </ImageView>
+
+                <Label text="UTSA Meal Plans Sign In Page" styleClass="page-top-title"/>
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER" spacing="80.0" styleClass="signin-main-area">
+            <padding>
+                <Insets top="60" right="90" bottom="40" left="90"/>
+            </padding>
+            <children>
+                <ImageView fitWidth="600.0" fitHeight="380.0" preserveRatio="false" styleClass="signin-image">
+                    <image>
+                        <Image url="@assets/dining-hall.jpg"/>
+                    </image>
+                </ImageView>
+
+                <VBox spacing="16.0" maxWidth="360.0">
+                    <children>
+                        <Label text="Welcome Back!" styleClass="signin-title"/>
+                        <Label text="Sign in to manage your meal plan and&#10;explore dining options."
+                               styleClass="signin-subtitle"/>
+
+                        <TextField promptText="Email Address" styleClass="signin-field"/>
+                        <PasswordField promptText="Password" styleClass="signin-field"/>
+
+                        <Button text="Sign In" styleClass="signin-button"/>
+
+                        <Label text="Forgot Password?" styleClass="signin-small-text"/>
+                        <Label text="Don't have an account? Sign up." styleClass="signin-small-text"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+
+</BorderPane>
