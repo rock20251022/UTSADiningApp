@@ -204,10 +204,3 @@ The login screen will appear. Input login credentials to access the dashboard
 **Username:** abc123
 
 **Password:** password123
-
----
-
-## UML Class Diagram
-
-![UML Class Diagram](documents/uml/UTSADiningUML.png)
-
