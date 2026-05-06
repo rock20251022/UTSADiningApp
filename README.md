@@ -210,3 +210,4 @@ The login screen will appear. Input login credentials to access the dashboard
 ## UML Class Diagram
 
 ![UML Class Diagram](documents/uml/UTSADiningUML.png)
+
