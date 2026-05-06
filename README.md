@@ -78,10 +78,10 @@ From the dashboard, users can go to:
 ## Contributors
 
 
-- Matthew Knudsen
+- Andrew Teran
 - Ian Villarreal
 - Aria McNulty
-- Andrew Teran
+- Matthew Knudsen
 
 ---
 
